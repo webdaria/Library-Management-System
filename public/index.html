@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Library</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Welcome to the Universal Library</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="mainMenu">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav>
+            <ul >
+              <li onClick="window.location.reload()">Home </li>
+              <li onclick="openForm()">ReturnBook</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="search-box">
+            <input type="text" name="bookname" placeholder="Book Name" id="bookname">
+            <input type="text" name="author" placeholder="Author" id="author">
+            <select name="genre" id="genre">
+              <option value="">Genre</option>
+              <option value="Fiction">Fiction </option>
+              <option value="Adventure">Adventure</option>
+              <option value="Classic">Classic</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Fantasy">Dystopian</option>
+            </select>
+            <input type="submit" value="Search" id="searchBtn" class="btn-brown">
+          </div>
+        </div>
+        
+        <div class="col-12">
+          <div id="stockBooks" class="booksList">
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<!-- return form  -->
+  <div class="form-popup bookLook" id="return-form">
+    <form action="/return" method="post" class="form-container return-form">
+      <h1 class="ret-header"> Return Book </h1>
+      <div class="labelWrapper">
+        <label for="tid">
+          <input type="text" placeholder="Enter transaction id " name="tid" - required>
+        </label>
+        <label for="bid">
+          <input type="text" placeholder="Enter Bookid" name="bid" - required>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-green" id="ret-btn"> Return</button>
+      <button type="button" class="btn btn-brown" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+
+   <!-- borrow-form  -->
+  <div class="form-popup bookLook" id="borrow-form">
+    <form  class="form-container borrow-book-form">
+      <h2 class="ret-header">
+        Borrow Book <br>
+        <span id="borrowBookName"></span>
+      </h2>
+      <div class="labelWrapper">
+        <label for = "uid" class = "w-100">
+          <input type = "text" placeholder = "Enter your User Id" id = "uid" name="uid" - required> 
+        </label>
+      </div>
+      <button type = "button" class = "btn  btn-green" id = "brrBtn" > Borrow</button>
+      <button type="button" class="btn btn-brown" onclick="closeBrrForm()">Close</button>
+    </form>
+  </div>
+  
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p>
+            &copy; 2023 Universal Library. Prepared by <i> DARIYA DIVYA SUNITA </i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src = "js/index.js"> </script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/sweetalert2.js"></script>
+ 
+
+</body>
+
+</html>

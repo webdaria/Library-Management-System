@@ -1,0 +1,260 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  --main-green: #04AA6D;
+  --light-green: #1fe69d;
+  --main-brown: #A83118;
+  --dark-brown: #8F2814;
+}
+
+.bookLook {
+  border-radius: 0 16px 16px 0;
+}
+
+.card_body{
+  display:flex;
+  flex-direction: column;
+  padding:10px;
+  margin-top: 5px;
+}
+
+.btn-brown {
+  background-color: var(--main-brown);
+  border-radius: 3px 8px 8px 3px;
+  color: white;
+}
+.btn-brown:hover {
+  background-color: var(--dark-brown);
+  color: white;
+}
+
+.btn-grey {
+  background-color:gainsboro;
+
+}
+.buttons{
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  padding :10px;
+}
+
+
+.btn-green {
+  background-color: var(--main-green);
+  border-radius: 3px 8px 8px 3px;
+  color: white;
+}
+.btn-green:hover {
+  background-color: var(--light-green);
+  color: white;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 100px 10px 10px;
+  text-align: center;
+  background-image: url('img/book_pattern.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  min-height: 300px;
+}
+
+header h1 {
+  font-size: 60px;
+  text-shadow: 0 0 15px black;
+}
+
+.mainMenu {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.search-box {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.search-box input[type="text"] {
+  max-width: 300px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.search-box input[type="submit"] {
+  padding: 7px 32px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-box select {
+  padding: 8px 5px;
+}
+
+main {
+  padding: 64px 0 96px;
+}
+
+main .title {
+  margin-bottom: 20px;
+}
+
+.booksList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.booksList .book {
+  width: 300px;
+  max-width: 32%;
+  margin-bottom: 30px;
+}
+
+.booksList .book .card-img-top{
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.booksList .book .card-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.booksList .book .card-body .card-title{
+  min-height: 2em;
+}
+
+.booksList .book .card-body .btn-green {
+  align-self: flex-end;
+}
+
+
+footer {
+  background-color: var(--main-brown);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+/* styles for popup  */
+
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  box-shadow: 0 0 50px 4px #000000a1;
+}
+
+/* Add styles to the form container */
+.form-container {
+  width: 500px;
+  padding: 32px;
+  background-color: white;
+}
+
+.form-container .labelWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.form-container .labelWrapper label{
+  width: 49%;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus,
+.form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.ret-header {
+  text-align: center;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+.button {
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  cursor: pointer;
+}
